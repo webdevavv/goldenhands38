@@ -1934,3 +1934,111 @@ details[open] p {
   top: auto;
   bottom: 18px;
 }
+
+/* Контакты для записи: сайт-визитка, без формы. */
+.contact-modal {
+  max-width: 520px;
+  padding: 32px;
+  background: #faf8fb;
+}
+.contact-modal .modal-head {
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+.contact-modal .eyebrow {
+  font-size: 10px;
+  margin: 2px 0 20px;
+  letter-spacing: 1.7px;
+}
+.contact-modal .modal-head h2 {
+  font-size: 43px;
+  line-height: 1.12;
+  margin: 0;
+}
+.contact-modal-description {
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--muted);
+  margin-bottom: 24px;
+}
+.booking-contacts {
+  display: grid;
+  gap: 12px;
+}
+.booking-contact {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 17px;
+  padding: 18px;
+  transition:
+    transform 0.2s,
+    border-color 0.2s,
+    background 0.2s;
+}
+.booking-contact:hover {
+  transform: translateY(-2px);
+  border-color: #c99acd;
+  background: #f5eef6;
+}
+.booking-contact-icon {
+  display: grid;
+  place-items: center;
+  width: 43px;
+  height: 43px;
+  flex-shrink: 0;
+  border-radius: 14px;
+  background: #eee2f0;
+  color: var(--plum);
+  font-size: 25px;
+}
+.booking-contact strong {
+  display: block;
+  font-size: 15px;
+  font-weight: 600;
+}
+.booking-contact small {
+  display: block;
+  font-size: 13px;
+  color: var(--muted);
+  margin-top: 4px;
+}
+.contact-arrow {
+  margin-left: auto;
+  color: var(--plum);
+  font-size: 23px;
+}
+.contact-modal-address {
+  font-size: 12px !important;
+  color: var(--muted);
+  text-align: center;
+  margin: 24px 0 0;
+}
+@media (max-width: 480px) {
+  .contact-modal {
+    padding: 23px;
+  }
+  .contact-modal .modal-head h2 {
+    font-size: 36px;
+  }
+  .booking-contact {
+    padding: 15px 12px;
+    gap: 11px;
+  }
+  .booking-contact-icon {
+    width: 36px;
+    height: 36px;
+    font-size: 22px;
+  }
+  .booking-contact strong {
+    font-size: 14px;
+  }
+  .booking-contact small {
+    font-size: 12px;
+  }
+  .contact-arrow {
+    font-size: 20px;
+  }
+}

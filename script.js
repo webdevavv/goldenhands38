@@ -61,9 +61,6 @@
   );
   $$("[data-book]").forEach((button) =>
     button.addEventListener("click", () => {
-      $("#booking-form").reset();
-      $("#booking-result").hidden = true;
-      $("#booking-form select").value = button.dataset.book || "";
       openDialog(booking);
     }),
   );
@@ -82,34 +79,6 @@
       openDialog(lightbox);
     }),
   );
-
-  const phone = $('[name="phone"]');
-  phone.addEventListener("input", () => {
-    let digits = phone.value.replace(/\D/g, "");
-    if (digits[0] === "8") digits = "7" + digits.slice(1);
-    if (digits && digits[0] !== "7") digits = "7" + digits;
-    const n = digits.slice(1, 11);
-    phone.value = digits
-      ? "+7" +
-        (n ? " (" + n.slice(0, 3) : "") +
-        (n.length >= 3 ? ") " : "") +
-        n.slice(3, 6) +
-        (n.length > 6 ? "-" + n.slice(6, 8) : "") +
-        (n.length > 8 ? "-" + n.slice(8, 10) : "")
-      : "";
-    phone.setCustomValidity("");
-  });
-  phone.addEventListener("invalid", () =>
-    phone.setCustomValidity("Введите телефон полностью: +7 (999) 123-45-67"),
-  );
-  $("#booking-form").addEventListener("submit", (event) => {
-    event.preventDefault();
-    const result = $("#booking-result");
-    result.textContent =
-      "Форма заполнена правильно. Это демонстрация: заявка не отправлена. Чтобы записаться, позвоните +7 (3952) 73-88-88.";
-    result.hidden = false;
-    result.scrollIntoView({ block: "nearest", behavior: "smooth" });
-  });
 
   cookie.hidden = read("gh-static-cookie") === "accepted";
   $("#cookie-accept").addEventListener("click", () => {

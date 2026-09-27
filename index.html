@@ -84,7 +84,7 @@
           </p>
           <div class="actions">
             <button class="button" data-book="">
-              Записаться онлайн<svg
+              Связаться для записи<svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="19"
                 height="19"
@@ -309,7 +309,7 @@
           <p class="eyebrow">НИЧЕГО ЛИШНЕГО</p>
           <h2>Записаться проще,<br />чем выбрать <em>оттенок</em></h2>
           <button class="button outline" data-book="">
-            Выбрать время<svg
+            Обсудить время<svg
               xmlns="http://www.w3.org/2000/svg"
               width="19"
               height="19"
@@ -718,7 +718,7 @@
               </svg>
             </summary>
             <p>
-              Выберите ближайшее направление и опишите пожелания в комментарии.
+              Напишите нам, какой уход вам нужен, — поможем выбрать направление.
               Состав процедуры можно уточнить перед записью.
             </p>
           </details>
@@ -862,8 +862,9 @@
               </svg>
             </summary>
             <p>
-              Форма на сайте демонстрационная. Для настоящей записи свяжитесь со
-              студией по указанным контактам.
+              Да, напишите в Instagram @goldenhands38 или на почту
+              goldenhands38@mail.ru. Кнопка «Записаться» откроет все контакты
+              студии.
             </p>
           </details>
         </div>
@@ -1017,7 +1018,6 @@
         </div>
         <div class="legal-links">
           <a href="privacy.html">Политика конфиденциальности</a
-          ><a href="consent.html">Согласие на обработку ПД</a
           ><a href="terms.html">Пользовательское соглашение</a
           ><a href="cookies.html">Политика cookie</a
           ><a href="promo-terms.html">Условия акции</a
@@ -1032,65 +1032,50 @@
         </div>
       </div>
     </footer>
-    <dialog id="booking-dialog" class="modal" aria-labelledby="booking-title">
+    <dialog
+      id="booking-dialog"
+      class="modal contact-modal"
+      aria-labelledby="booking-title"
+      aria-describedby="booking-description"
+    >
       <div class="modal-head">
-        <h2 id="booking-title">Время для себя</h2>
+        <div>
+          <p class="eyebrow">ЗОЛОТЫЕ РУЧКИ · ИРКУТСК</p>
+          <h2 id="booking-title">Запишемся<br /><em>на красоту?</em></h2>
+        </div>
         <button class="icon-button" data-close aria-label="Закрыть">×</button>
       </div>
-      <p class="notice">
-        Это демонстрационная форма. Данные никуда не отправляются. Для записи:
-        <a href="tel:+73952738888">+7 (3952) 73-88-88</a>.
+      <p id="booking-description" class="contact-modal-description">
+        Напишите нам или позвоните — уточним услугу и подберём удобное время.
       </p>
-      <form id="booking-form">
-        <label
-          >Услуга<select name="service" required>
-            <option value="">Выберите услугу</option>
-            <option>Маникюр</option>
-            <option>Педикюр</option>
-            <option>Подология</option>
-            <option>Брови и ресницы</option>
-            <option>Депиляция</option>
-            <option>Массаж лица и тела</option>
-            <option>Обучение мастеров</option>
-          </select></label
+      <div class="booking-contacts">
+        <a
+          class="booking-contact"
+          href="https://www.instagram.com/goldenhands38/"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><span class="booking-contact-icon" aria-hidden="true">◎</span
+          ><span
+            ><strong>Написать в Instagram</strong
+            ><small>@goldenhands38</small></span
+          ><span class="contact-arrow" aria-hidden="true">↗</span></a
         >
-        <div class="form-row">
-          <label
-            >Ваше имя<input
-              name="name"
-              autocomplete="given-name"
-              required
-              minlength="2"
-              placeholder="Как к вам обращаться" /></label
-          ><label
-            >Телефон<input
-              name="phone"
-              autocomplete="tel"
-              type="tel"
-              required
-              pattern="\+7 \([0-9]{3}\) [0-9]{3}-[0-9]{2}-[0-9]{2}"
-              placeholder="+7 (___) ___-__-__"
-          /></label>
-        </div>
-        <label
-          >Пожелания<textarea
-            name="comment"
-            rows="2"
-            maxlength="500"
-            placeholder="Оттенок, дизайн или удобный день"
-          ></textarea></label
-        ><label class="checkbox"
-          ><input name="consent" type="checkbox" required /><span
-            >Я даю
-            <a href="consent.html" target="_blank"
-              >согласие на обработку персональных данных</a
-            ></span
-          ></label
-        ><button class="button full" type="submit">
-          Проверить форму <span>↗</span>
-        </button>
-        <p id="booking-result" class="notice" role="status" hidden></p>
-      </form>
+        <a class="booking-contact" href="tel:+73952738888"
+          ><span class="booking-contact-icon" aria-hidden="true">☎</span
+          ><span
+            ><strong>Позвонить в студию</strong
+            ><small>+7 (3952) 73-88-88</small></span
+          ><span class="contact-arrow" aria-hidden="true">↗</span></a
+        >
+        <a class="booking-contact" href="mailto:goldenhands38@mail.ru"
+          ><span class="booking-contact-icon" aria-hidden="true">@</span
+          ><span
+            ><strong>Написать на почту</strong
+            ><small>goldenhands38@mail.ru</small></span
+          ><span class="contact-arrow" aria-hidden="true">↗</span></a
+        >
+      </div>
+      <p class="contact-modal-address">Коммунистическая 65 · офис 1 · 3 этаж</p>
     </dialog>
     <dialog id="menu-dialog" class="modal" aria-label="Меню">
       <div class="modal-head">
